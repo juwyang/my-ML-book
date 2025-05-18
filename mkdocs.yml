@@ -1,0 +1,45 @@
+# mkdocs.yml
+
+# 项目信息
+site_name: my ML Books  # 替换成你的书籍名称
+site_url: https://juwyang.github.io/my-ML-book/ # 如果使用 GitHub Pages，或者留空让 Read the Docs 自动填充
+site_author: JYang
+site_description: ML from AI
+
+# 版权信息 (可选)
+# copyright: 'Copyright &copy; 2024 你的名字'
+
+# 主题配置 (Read the Docs 默认主题是 "readthedocs")
+theme:
+  name: readthedocs  # 或者 'material' 等其他主题
+  # 可选配置，例如：
+  # highlightjs: true
+  # languages: ['zh'] # 如果你的内容主要是中文
+
+# 导航栏配置 (非常重要，用于生成左侧导航)
+nav:
+  - 'Preface': 'index.md'
+  - 'PCA':
+    - 'PCA-1': 'PCA(Long).md'
+    - 'PCA-2': 'PCA(short).md'
+  - 'Linear Regression': 'Linear_Regression.md'
+  - 'SVM': 'SVM.md'
+  - 'ML':
+    - 'ML(Long)': 'ML(Long).md'
+    
+# Markdown 扩展 (可选，但常用)
+markdown_extensions:
+  - admonition  # 用于创建提示框，如 Note, Warning 等
+  - pymdownx.highlight: # 代码高亮
+      anchor_linenums: true
+  - pymdownx.superfences # 更强大的代码块
+  - toc:
+      permalink: true # 为标题添加永久链接
+      toc_depth: 3    # 目录深度
+
+# 插件 (可选)
+# plugins:
+#   - search # MkDocs 内置搜索功能，Read the Docs 也有自己的搜索
+
+# Read the Docs 通常会覆盖 docs_dir，但本地构建时有用
+# docs_dir: 'docs'

@@ -1,0 +1,28 @@
+# .readthedocs.yaml
+
+version: 2
+
+# 设置构建过程使用的 Python 版本
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.11" # 或者你项目需要的 Python 版本
+
+# MkDocs 配置
+mkdocs:
+  configuration: mkdocs.yml
+  # fail_on_warning: false # 如果希望警告不导致构建失败，可以取消注释
+
+# 如果你的项目有 Python 依赖 (例如 MkDocs 主题或插件)
+python:
+  install:
+    - requirements: requirements.txt
+  # system_packages: # 如果需要系统级别的包
+  #   - name: "libxml2-dev"
+  #   - name: "libxslt1-dev"
+
+# 可选：指定文档的格式 (如果不是自动检测)
+# formats:
+#   - htmlzip
+#   - pdf
+#   - epub
