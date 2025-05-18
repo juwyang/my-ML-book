@@ -1,7 +1,7 @@
 # mkdocs.yml
 
 # 项目信息
-site_name: my ML Books  # 替换成你的书籍名称
+site_name: my ML Book  # 替换成你的书籍名称
 site_url: https://juwyang.github.io/my-ML-book/ # 如果使用 GitHub Pages，或者留空让 Read the Docs 自动填充
 site_author: JYang
 site_description: ML from AI
@@ -32,13 +32,16 @@ markdown_extensions:
   - admonition  # 用于创建提示框，如 Note, Warning 等
   - pymdownx.highlight: # 代码高亮
       anchor_linenums: true
-  - pymdownx.superfences # 更强大的代码块
+  - pymdownx.superfences 
   - pymdownx.arithmatex:
       generic: true # 允许使用 LaTeX 数学公式
   - toc:
       permalink: true # 为标题添加永久链接
       toc_depth: 3    # 目录深度
-
+      
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6  # MathJax 推荐的 polyfill
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js # MathJax v3 CDN
 # 插件 (可选)
 # plugins:
 #   - search # MkDocs 内置搜索功能，Read the Docs 也有自己的搜索
