@@ -1,18 +1,18 @@
 Here's a comprehensive review of Principal Component Analysis (PCA):
 
-1. BRIEF OVERVIEW AND HISTORY
-- Developed by Karl Pearson (1901) and Harold Hotelling (1933)
-- A dimensionality reduction technique that transforms high-dimensional data into lower dimensions while preserving maximum variance
+1. BRIEF OVERVIEW AND HISTORY 
+   - Developed by Karl Pearson (1901) and Harold Hotelling (1933)
+   - A dimensionality reduction technique that transforms high-dimensional data into lower dimensions while preserving maximum variance
 
-1. REAL-WORLD APPLICATIONS
-- Image compression and facial recognition
-- Gene expression analysis in bioinformatics
-- Financial data analysis and risk assessment
-- Pattern recognition in signal processing
-- Noise reduction in data
-- Feature extraction in machine learning
+2. REAL-WORLD APPLICATIONS
+   - Image compression and facial recognition
+   - Gene expression analysis in bioinformatics
+   - Financial data analysis and risk assessment
+   - Pattern recognition in signal processing
+   - Noise reduction in data
+   - Feature extraction in machine learning
 
-1. MATHEMATICAL FORMULATION
+2. MATHEMATICAL FORMULATION
 Key Concepts:
 - X: Data matrix (n × p), where n = samples, p = features
 - Σ: Covariance matrix
