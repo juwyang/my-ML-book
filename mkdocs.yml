@@ -11,7 +11,7 @@ site_description: ML from AI
 
 # 主题配置 (Read the Docs 默认主题是 "readthedocs")
 theme:
-  name: readthedocs  # 或者 'material' 等其他主题
+  name: rtd-dropdown  # 或者 'material' 等其他主题
   # 可选配置，例如：
   # highlightjs: true
   # languages: ['zh'] # 如果你的内容主要是中文
@@ -26,7 +26,7 @@ nav:
   - 'SVM': 'SVM.md'
   - 'ML':
     - 'ML(Long)': 'ML(Long).md'
-    
+
 # Markdown 扩展 (可选，但常用)
 markdown_extensions:
   - admonition  # 用于创建提示框，如 Note, Warning 等

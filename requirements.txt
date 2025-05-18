@@ -1,6 +1,6 @@
 # requirements.txt
 
 mkdocs>=1.5.0            # MkDocs 本身
-mkdocs-rtd-theme # Read the Docs 主题 (如果使用)
+mkdocs-rtd-dropdown # Read the Docs 主题 (如果使用)
 # mkdocs-material        # 如果使用 Material 主题
 pymdown-extensions     # 如果在 mkdocs.yml 中使用了 pymdownx 扩展
