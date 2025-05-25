@@ -7,7 +7,7 @@ dim(\(\mathcal{N}(A)\)) + dim(\(\mathcal{R}(A^T)\)) = \(m\) .
 ## Existence:
 \(b\) is in the column space of \(A\), denoted as \(\mathcal{R}(A)\), which means we can find a combination of the columns of \(A\) that equals \(b\).
 ## Uniqueness:
-!!! info from \(Ax=0\) to \(Ax=b\) 
+!!! info "from \(Ax=0\) to \(Ax=b\)"
     general solution = homogeneous solution + particular solution. 
     If the homogeneous solution is unique, then the general solution is unique.
     If \(Ax=0\) has only the trivial solution, then columns are linearly independent, \(A\) is full column rank.
@@ -17,10 +17,10 @@ dim(\(\mathcal{N}(A)\)) + dim(\(\mathcal{R}(A^T)\)) = \(m\) .
 - error structure: heteroscedasticity - standard errors are not valid - generalized least squares
 - multicollinearity - coefficients not stable - lasso or orthogonalization - variance inflation factor (VIF)
 
-!!! info Heteroscedasticity
+!!! info "Heteroscedasticity"
     Heteroskedasticity affects the efficiency of OLS estimates and the validity of standard errors, but not necessarily their unbiasedness or consistency (unless it's a symptom of a misspecified model that also causes endogeneity)
 
-!!! note Instrumental Variables
+!!! note "Instrumental Variables"
     to solve endogeneity, that is correlation between independent variables and error term, introduce an instrument variable that is correlated with the independent variable but not with the error term.
 
 ## Geometric interpretation
@@ -42,7 +42,7 @@ Thus residual \(e_1 + e_2 + ... + e_n = 0\).
 \(R^2 = \frac{SSR}{SST} = 1 - \frac{SSE}{SST} = \frac{\sum_{i=1}^n (\hat y_i - \bar y)^2}{\sum_{i=1}^n (y_i - \bar y)^2}\).
 \(R^2 = corr^2(y, \hat y) \)
 
-!!! tip linear correlation 
+!!! tip "linear correlation"
     \(r(X, aY+b) = r(X, Y)\) for some constants \(a\) and \(b\).
 
 one-dim: \(R^2 = corr^2(X, y) = \frac{l_{xy}^2}{l_{xx}l_{yy}}\), because there's only one independent variable.

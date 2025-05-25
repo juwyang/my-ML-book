@@ -40,7 +40,8 @@ markdown_extensions:
       toc_depth: 3    # 目录深度
       
 extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6  # MathJax 推荐的 polyfill
+  - js/mathjax-config.js
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6  # MathJax 推荐的 polyfill
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js # MathJax v3 CDN
 # 插件 (可选)
 # plugins:

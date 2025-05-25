@@ -11,4 +11,3 @@ Another three parts version assumes $y = f(x) + \epsilon$.
 - *Overfitting*: high variance(sensitive to changes), low bias. 
 - *Underfitting*: low variance, high bias.
 
-## KKT

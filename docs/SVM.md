@@ -2,16 +2,16 @@ Binary classification \(y_i \in \{-1, 1\}\).
 
 There's a hyperplane \(f(x)=w^T x + b = 0\) that separates the data points, the distance from any point \(\bm x\) to the hyperplane: the projection to the normal vector \(\bm w\). \(\frac{\bm w'(\bm x - \bm x_0)}{\|\bm w\|}=\frac{f(x)}{\|w\|}\), where \(\bm x_0\) is a point on the hyperplane. 
 
-!!! info Normal of a hyperplane
+!!! info "Normal of a hyperplane"
     The normal vector of the hyperplane \(w^T x + b = 0\) is \(\bm w\), because for any two points \(\bm x_1\) and \(\bm x_2\) on the hyperplane, \(\bm w^T (\bm x_1 - \bm x_2) = 0\).
 
 ### Problem Formulation
-\[\max M \\ \text{s.t } y_i\frac{f(x_i)}{\|w\|} \ge M, \forall i\] constrain  \(\|w\| = 1/M \) to rewrite as a minimization problem \[\min \frac{1}{2}\|w\|^2 \\ \text{s.t } y_i(w^T x_i + b) \ge 1\].
+\[ \max M \\ \text{s.t } y_i\frac{f(x_i)}{\|w\|} \ge M, \forall i \] constrain  \(\|w\| = 1/M \) to rewrite as a minimization problem \[\min \frac{1}{2}\|w\|^2 \\ \text{s.t } y_i(w^T x_i + b) \ge 1\].
 
-!!!info KKT
-    \[\min f(x) \\ \text{s.t } g(x) \leq 0, h(x) = 0\] is equivalent to \(\min f(x) + \lambda h(x) + \mu g(x), \mu \geq 0\). At the boundary \(g(x) = 0\), we use \(\mu > 0\) to prevent \(g(x)\) from going positive.
+!!!info "KKT"
+    \[ \min f(x) \\ \text{s.t } g(x) \leq 0, h(x) = 0 \] is equivalent to \(\min f(x) + \lambda h(x) + \mu g(x), \mu \geq 0\). At the boundary \(g(x) = 0\), we use \(\mu > 0\) to prevent \(g(x)\) from going positive.
 
-!!!info Primal and Dual
+!!!info "Primal and Dual"
     After introducing Lagrange multipliers, we have the Lagrangian function \(L(w, \lambda, \mu)\) that contains the original parameters \(w\) and the new multipliers \(\lambda, \mu\). The primal optimization order: 
     \(P^* = \min_w \max_{\lambda, \mu \ge 0} L(w, \lambda, \mu)\), while the dual optimization order is the opposite: \(D^* = \max_{\lambda, \mu \ge 0} \min_w L(w, \lambda, \mu)\).
 
