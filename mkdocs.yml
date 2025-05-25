@@ -1,13 +1,13 @@
 # mkdocs.yml
 
 # 项目信息
-site_name: my ML Book  # 替换成你的书籍名称
+site_name: my-little-ML-book  # 替换成你的书籍名称
 site_url: https://juwyang.github.io/my-ML-book/ # 如果使用 GitHub Pages，或者留空让 Read the Docs 自动填充
 site_author: JYang
-site_description: ML from AI
+# site_description: ML from AI
 
 # 版权信息 (可选)
-# copyright: 'Copyright &copy; 2024 你的名字'
+copyright: 'Copyright &copy; 2025 JYang'
 
 # 主题配置 (Read the Docs 默认主题是 "readthedocs")
 theme:
@@ -19,13 +19,13 @@ theme:
 # 导航栏配置 (非常重要，用于生成左侧导航)
 nav:
   - 'Preface': 'index.md'
-  - 'PCA':
-    - 'PCA-1': 'PCA(Long).md'
-    - 'PCA-2': 'PCA(short).md'
-  - 'Linear Regression': 'Linear Regression.md'
+  - 'General': 'General.md'
+  - 'LinearRegression': 'LinearRegression.md'
+  - 'PCA': 'PCA.md'
   - 'SVM': 'SVM.md'
-  - 'ML':
-    - 'ML(Long)': 'ML(Long).md'
+  - 'Boosting': 'Boosting.md'
+  - 'Warehouse': 'Warehouse.md'
+
 
 # Markdown 扩展 (可选，但常用)
 markdown_extensions:
