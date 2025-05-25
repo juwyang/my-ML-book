@@ -1,24 +1,23 @@
-# 我的第一本 Read the Docs 书籍
+# A little book about Machine Learning
 
-欢迎来到我的第一本使用 Read the Docs 和 MkDocs 创建的在线书籍！
 
-## 关于本书
+## About This Book
 
-这本书旨在介绍 [某个主题]，从基础概念到高级应用。无论你是初学者还是有一定经验的读者，都希望能从中有所收获。
+Created by Read the Docs.
 
-**主要内容包括：**
+<!-- **The main contents include:**
 
-*   [章节1的简要描述]
-*   [章节2的简要描述]
-    *   [小节2.1的简要描述]
-    *   [小节2.2的简要描述]
-*   [更多章节...]
+*   [Ch1 is about ...]
+*   [Ch2 is about ...]
+    *   [Section 2.1 is about ...]
+    *   [Section 2.2 is about ...]
+*   [More chapters...] -->
 
-## 如何阅读
+<!-- ## How to Read
 
-建议按顺序阅读各个章节，但你也可以根据自己的兴趣直接跳转到特定主题。左侧的导航栏可以帮助你快速定位内容。
+Use the navigation bar on the left to quickly locate the content you are interested in. It is recommended to read the chapters in order, but you can also jump directly to specific topics based on your interests. -->
 
 ---
 
-*作者：你的名字*
-*最后更新：2025年5月*
+*author: JYang*
+*last updated: 2025-05*

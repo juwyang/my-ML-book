@@ -1,45 +1,28 @@
-SVM:
-2分类问题: 根据线性的hyperplane方程$w^Tx+b=0$来划分数据集.
+Binary classification \(y_i \in \{-1, 1\}\).
 
-两个contributions: soft margin, kernel trick.
+There's a hyperplane \(f(x)=w^T x + b = 0\) that separates the data points, the distance from any point \(\bm x\) to the hyperplane: the projection to the normal vector \(\bm w\). \(\frac{\bm w'(\bm x - \bm x_0)}{\|\bm w\|}=\frac{f(x)}{\|w\|}\), where \(\bm x_0\) is a point on the hyperplane. 
 
-hyperparameter in soft margin: cost(misclassification penalty) C.
+!!! info Normal of a hyperplane
+    The normal vector of the hyperplane \(w^T x + b = 0\) is \(\bm w\), because for any two points \(\bm x_1\) and \(\bm x_2\) on the hyperplane, \(\bm w^T (\bm x_1 - \bm x_2) = 0\).
 
-(+ k-1 超平面的法线): p维空间的超平面 $w^Tx+b=0$; $w \in R^p$. 向量$w = (w_1, w_2, \ldots, w_p)$就是超平面的法线, 它与超平面上任意两点的连线垂直. $w(\bm{x_1}-\bm{x_2})=0$
+### Problem Formulation
+\[\max M \\ \text{s.t } y_i\frac{f(x_i)}{\|w\|} \ge M, \forall i\] constrain  \(\|w\| = 1/M \) to rewrite as a minimization problem \[\min \frac{1}{2}\|w\|^2 \\ \text{s.t } y_i(w^T x_i + b) \ge 1\].
 
-怎么得到超平面和确定哪些是支持向量？
-(+ k-2 点到超平面的距离): $\bm{x_0}$是超平面上一点，其他任意一点 $\bm x$, $\bm x-\bm{x_0}$与法向量$\bm w/\|\bm w\|$的内积就是投影距离. 
+!!!info KKT
+    \[\min f(x) \\ \text{s.t } g(x) \leq 0, h(x) = 0\] is equivalent to \(\min f(x) + \lambda h(x) + \mu g(x), \mu \geq 0\). At the boundary \(g(x) = 0\), we use \(\mu > 0\) to prevent \(g(x)\) from going positive.
 
-优化问题:找到最大化间隔的超平面.
-$$\max_w \ M \\ 
-s.t. \ y_i(w^Tx_i+b)/\|w\| \geq M$$
+!!!info Primal and Dual
+    After introducing Lagrange multipliers, we have the Lagrangian function \(L(w, \lambda, \mu)\) that contains the original parameters \(w\) and the new multipliers \(\lambda, \mu\). The primal optimization order: 
+    \(P^* = \min_w \max_{\lambda, \mu \ge 0} L(w, \lambda, \mu)\), while the dual optimization order is the opposite: \(D^* = \max_{\lambda, \mu \ge 0} \min_w L(w, \lambda, \mu)\).
 
-tour: 如果改成最小二乘损失怎么样，最大化总和垂直距离?
+Dual of SVM:
+Substitute \(w\) and \(b\) in the Lagrange from \(\nabla_w L = 0, \nabla_b L = 0\). We will get
+\[\max_\alpha \sum_{i=1}^N \alpha_i - \frac{1}{2} \sum_{i=1}^N \sum_{j=1}^N \alpha_i \alpha_j y_i y_j x_i^T x_j.\]
 
-由于现在 $\|w\|$没限定，我们用1/M限制它, 把M消掉, 转化为min问题，应用KKT.
+### Soft Margin
+\[\min \frac{1}{2}\|w\|^2 + C\sum_i\xi_i \\ \text{s.t } y_i(w^T x_i + b) \ge 1-\xi_i, \xi_i \ge 0.\]
 
-(+ k-3 inequality constraint KKT的形式，最优化条件和约束effectiveness)
+### Kernel
+Assume hyperplane in the kernel feature space: \(f(n(x)) = w^T n(x) + b = 0\) could separate the data points, \(n(x) \) is the feature mapping.
 
-(+ k-4 primal and dual)
-现在的损失函数有系数和乘子$\alpha_i$ 两个调整: $L(w, b, \alpha_i)$, primal $\min_w L$, dual $\max_\alpha L$.
-
-然后使用二次规划或者Sequential Minimal Optimization算法, 求解出$\alpha_i$, 其中那些$\alpha_i>0$的点就是支持向量, 利用最优化需要满足的导数为0的$\alpha, w$关系可以回代得到$w$, 超平面的方程. 在回代中可以发现只有那些$\alpha_i>0$的点才会影响到$w$, 也就是支持向量.
-$w - \sum \alpha_i y_i x_i = 0$
-
-带soft-margin, 目标函数:
-$$\min_w \frac{1}{2}\|w\|^2 + C\sum_i \xi_i\\
-\text{subject to } y_i(w^Tx_i+b) \geq 1-\xi_i$$
-C是一个超参数.
-
-
-Q: kernel trick是怎么应用到SVM的？
-因为在dual form中，$x_i'x_j$作为整体出现, 因此可以将其替换为其他的核函数$K(x_i,x_j)$, 相应地分割超平面是在特征空间$\Phi(\bm x)$中的 $\bm w'\Phi(\bm x)+b=0$. 做预测的时候也只需要
-核函数就行.
-
-kernel: 已知$K(x,y)$是一个核函数, 相当于应用了其对应的feature map $\phi(x)$, 使得$K(x,y)=\phi(x)^T\phi(y)$. 也就是说你用一个和$\phi(x)$一样复杂的feature最后得到的结果就是这么多.
-
-和logistic regression相比: 能应对non-linear的情况.
-
-
-
-
+replace \(x_i^T x_j\) with a kernel function \(K(x_i, x_j)\).
