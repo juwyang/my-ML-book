@@ -1,14 +1,11 @@
-learn sequentially.
-
-!!! tip sequence
-    Primary Court - Intermediate Court - Supreme Court
+learn sequentially. Judge like Primary Court - Intermediate Court - Supreme Court.
 
 Adaptive Boosting(classifier, \(y_i \in \{-1, 1\}\)):
 Two - weighting schemes:
 - \(\alpha_i\) for each weak learner. 
 - \(w_i\) for each training sample.
 
-!!! warning Overfitting
+!!! warning "Overfitting"
 
 ### Gradient Boosting
 mimics gradient descent in function space, 

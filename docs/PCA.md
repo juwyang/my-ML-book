@@ -12,7 +12,7 @@ Solution - 1(Lagrange):
 
 Solution - 2(Rayleigh Quotient):
 
-!!! tip Rayleigh Quotient
+!!! tip "Rayleigh Quotient"
     \(\frac{v'X'Xv}{v'v}\) is maximized when \(v\) is the eigenvector of \(X'X\) corresponding to the largest eigenvalue.
 \(v = \argmax \frac{v'X'Xv}{v'v}\), subject to \(\|v\| = 1\). Diagonalize \(X'X = P\Lambda P'\), P is orthogonal, \(PP' = I\).
 
