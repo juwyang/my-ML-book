@@ -19,12 +19,13 @@ theme:
 # 导航栏配置 (非常重要，用于生成左侧导航)
 nav:
   - 'Preface': 'index.md'
-  - 'General': 'General.md'
+  - 'Basics': 'General.md'
   - 'LinearRegression': 'LinearRegression.md'
   - 'PCA': 'PCA.md'
   - 'SVM': 'SVM.md'
   - 'Boosting': 'Boosting.md'
-  - 'Warehouse': 'Warehouse.md'
+  - 'Trees': 'Trees.md'
+  - 'Others': 'Others.md'
 
 
 # Markdown 扩展 (可选，但常用)
