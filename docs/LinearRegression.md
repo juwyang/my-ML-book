@@ -25,9 +25,9 @@ dim(\(\mathcal{N}(A)\)) + dim(\(\mathcal{R}(A^T)\)) = \(m\) .
 
 ## Geometric interpretation
 - Orthogonally project \(y\) onto the column space of \(X\) to get \(\hat{y}\), closest point to \(y\) in the column space of \(X\), thus residuals \(y-\hat{y}\) are orthogonal to the column space of \(X\), i.e. \((y-\hat{y})^T X = 0\). The normal equations: 
-    \[
+  \(
     X^T(y-\hat{y}) = 0.
-    \]
+    \)
 Thus residual \(e_1 + e_2 + ... + e_n = 0\).
 \(y_i = x_i^T\hat\beta + e_i\), explains why the hyperplane goes through \( (\bar x, \bar y) \).
 

@@ -1,9 +1,9 @@
 Binary classification \(y_i \in \{-1, 1\}\).
 
-There's a hyperplane \(f(x)=w^T x + b = 0\) that separates the data points, the distance from any point \(\bm x\) to the hyperplane: the projection to the normal vector \(\bm w\). \(\frac{\bm w'(\bm x - \bm x_0)}{\|\bm w\|}=\frac{f(x)}{\|w\|}\), where \(\bm x_0\) is a point on the hyperplane. 
+There's a hyperplane \(f(x)=w^T x + b = 0\) that separates the data points, the distance from any point \(\boldsymbol x\) to the hyperplane: the projection to the normal vector \(\boldsymbol w\). \(\frac{\boldsymbol w'(\boldsymbol x - \boldsymbol x_0)}{\|\boldsymbol w\|}=\frac{f(x)}{\|\boldsymbol w\|}\), where \(\boldsymbol x_0\) is a point on the hyperplane.
 
 !!! info "Normal of a hyperplane"
-    The normal vector of the hyperplane \(w^T x + b = 0\) is \(\bm w\), because for any two points \(\bm x_1\) and \(\bm x_2\) on the hyperplane, \(\bm w^T (\bm x_1 - \bm x_2) = 0\).
+    The normal vector of the hyperplane \(w^T x + b = 0\) is \(\boldsymbol w\), because for any two points \(\boldsymbol x_1\) and \(\boldsymbol x_2\) on the hyperplane, \(\boldsymbol w^T (\boldsymbol x_1 - \boldsymbol x_2) = 0\).
 
 ### Problem Formulation
 \[ 
