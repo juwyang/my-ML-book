@@ -10,4 +10,8 @@ Variance of estimator + bias^2 of estimator.
 Another three parts version assumes $y = f(x) + \epsilon$.
 - *Overfitting*: high variance(sensitive to changes), low bias. 
 - *Underfitting*: low variance, high bias.
+also named as bias-variance tradeoff.
 
+## data issue: missing value, outlier, imbalance.
+- outlier: winsorize, loss function (MAE), tree model. Core: Weighting Scheme.
+- imbalance

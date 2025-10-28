@@ -3,21 +3,23 @@
 
 ## About This Book
 
-Created by Read the Docs.
+Created with Read the Docs.
 
-<!-- **The main contents include:**
+Statistical learning diagram: loss function.
 
-*   [Ch1 is about ...]
-*   [Ch2 is about ...]
-    *   [Section 2.1 is about ...]
-    *   [Section 2.2 is about ...]
-*   [More chapters...] -->
+Supervised learning: regression, classification.
+Unsupervised learning: clustering, dimensionality reduction.
+Neural networks.
 
-<!-- ## How to Read
+Regression: linear regression, trees.
+Classification: k-nearest neighbors, logistic regression, SVM, trees.
+Clustering: k-means.
+Dimensionality reduction: PCA.
 
-Use the navigation bar on the left to quickly locate the content you are interested in. It is recommended to read the chapters in order, but you can also jump directly to specific topics based on your interests. -->
+Advanced topics: language models, multimodal context alignment, MoE inference.
+
 
 ---
 
 *author: JYang*
-*last updated: 2025-05*
+*last updated: 2025-10*
